@@ -4,7 +4,7 @@ local M = {}
 
 
 function M.show(file)
-    print(file)
+    print(file .. ' <<')
     if Allow_jpg == 1 then
         vim.fn.system(vim.g.command_picshow_jpg .. " " .. file)
     else
