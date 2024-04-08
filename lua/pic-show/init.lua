@@ -17,14 +17,12 @@ M.set_none = function ()
     Allow_png = 0
 end
 
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+vim.api.nvim_create_autocmd({ "FileType" },{ --   "BufEnter", "BufWinEnter"}, {
     pattern = "*.jpg",
-    callback = jpg.show(vim.fn.expand("%"))
-
-    -- function()
-    --    print("jpg <<<")
-    --    jpg.show( vim.fn.expand("%") )
-    -- end
+    callback = function()
+       print("jpg <<<")
+       jpg.show( vim.fn.expand("%") )
+    end
 })
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
