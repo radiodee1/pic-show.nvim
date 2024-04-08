@@ -20,7 +20,14 @@ end
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.jpg",
     callback = function()
-        vim.api.nvim_set_keymap("n", "<F9>", ":!echo test<CR>", {silent = false})
+        jpg.show( vim.fn.expand("%") )
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    pattern = "*.png",
+    callback = function( vim.fn.expand("%") )
+        png.show()
     end
 })
 
