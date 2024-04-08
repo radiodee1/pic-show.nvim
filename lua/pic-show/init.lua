@@ -26,8 +26,8 @@ vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.png",
-    callback = function( vim.fn.expand("%") )
-        png.show()
+    callback = function( )
+        png.show(vim.fn.expand("%"))
     end
 })
 
