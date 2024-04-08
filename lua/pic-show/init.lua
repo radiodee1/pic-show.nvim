@@ -17,7 +17,7 @@ M.set_none = function ()
     Allow_png = 0
 end
 
-vim.api.nvim_create_autocmd({ "FileType" },{ --   "BufEnter", "BufWinEnter"}, {
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.jpg",
     callback = function()
        print("jpg <<<")
