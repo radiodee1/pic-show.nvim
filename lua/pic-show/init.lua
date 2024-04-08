@@ -1,6 +1,6 @@
 -- Imports the plugin's additional Lua modules.
-local png = require("pic-show.nvim.png")
-local jpg = require("pic-show.nvim.jpg")
+local png = require("pic-show.png")
+local jpg = require("pic-show.jpg")
 
 -- Creates an object for the module. All of the module's
 -- functions are associated with this object, which is

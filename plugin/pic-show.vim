@@ -3,8 +3,8 @@ if exists("g:loaded_picshow")
 endif
 let g:loaded_picshow = 1
 
-command! -nargs=1 PicShowPng lua require("pic-show.nvim").show_png()
-command! -nargs=1 PicShowJpg lua require("pic-show.nvim").show_jpg()
+command! -nargs=1 PicShowPng lua require("pic-show").show_png()
+command! -nargs=1 PicShowJpg lua require("pic-show").show_jpg()
 
 
 
