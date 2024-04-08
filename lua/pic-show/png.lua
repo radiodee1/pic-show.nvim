@@ -7,7 +7,7 @@ function M.show(file)
     if Allow_png == 1 then
         vim.fn.system(vim.g.command_picshow_png .. " " .. file)
     else
-        print"not allowed"
+        print("not allowed")
     end
 end
 
