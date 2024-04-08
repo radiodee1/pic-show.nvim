@@ -4,9 +4,9 @@ local M = {}
 
 function M.show()
 
+    print(vim.g.command_picshow_png .. " " .. vim.g.command_picshow_jpg)
     if Allow_jpg == 1 then
         print("jpg-allow")
-        print(vim.g.command_picshow)
     else
         print"not-allow"
     end
