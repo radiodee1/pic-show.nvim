@@ -1,16 +1,16 @@
--- Imports the plugin's additional Lua modules.
 local png = require("pic-show.png")
 local jpg = require("pic-show.jpg")
 
--- Creates an object for the module. All of the module's
--- functions are associated with this object, which is
--- returned when the module is called with `require`.
 local M = {}
 
--- Routes calls made to this module to functions in the
--- plugin's other modules.
 M.show_png = png.show 
 M.show_jpg = jpg.show 
 
+Allow_png = 0
+Allow_jpg = 0
+
+M.set_png = png.set 
+M.set_jpg = jpg.set 
+
 return M
-    
+
