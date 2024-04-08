@@ -4,8 +4,11 @@ local M = {}
 
 function M.show()
 
-if Allow_jpg then
+if Allow_jpg == 1 then
     print("jpg-allow")
+else
+    print"not-allow"
+
 end
     
 end
