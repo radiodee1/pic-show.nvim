@@ -19,10 +19,12 @@ end
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "*.jpg",
-    callback = function()
-        print("jpg <<<")
-        jpg.show( vim.fn.expand("%") )
-    end
+    callback = jpg.show(vim.fn.expand("%"))
+
+    -- function()
+    --    print("jpg <<<")
+    --    jpg.show( vim.fn.expand("%") )
+    -- end
 })
 
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
