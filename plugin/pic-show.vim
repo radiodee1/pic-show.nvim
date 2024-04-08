@@ -3,8 +3,8 @@ if exists("g:loaded_picshow")
 endif
 let g:loaded_picshow = 1
 
-if &command_picshow == ""
-    let command_picshow = "google-chrome"
+if !exists("g:command_picshow") 
+    let g:command_picshow = "google-chrome"
 endif
 
 
