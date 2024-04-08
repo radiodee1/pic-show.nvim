@@ -7,12 +7,9 @@ function M.show()
 
     if Allow_png == 1 then
         print("Allow_op png")
-
     else
         print"not Allow_op png"
     end
-
-
 end
 
 function M.set()

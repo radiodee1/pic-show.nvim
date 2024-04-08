@@ -3,6 +3,11 @@ if exists("g:loaded_picshow")
 endif
 let g:loaded_picshow = 1
 
+if &g:command_picshow == ""
+    let g:command_picshow = "google-chrome"
+endif
+
+
 command! -nargs=1 PicShowPng lua require("pic-show").show_png()
 command! -nargs=1 PicShowJpg lua require("pic-show").show_jpg()
 
