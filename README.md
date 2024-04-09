@@ -16,8 +16,7 @@ Tested on Neovim v0.9.4 .
 |---|---|
 | PicShowPng | Show a png in the viewer of choice |
 | PicShowJpg | Show a jpg in the viewer of choice |
-
-PicShowSetPng 
-PicShowSetJpg 
-PicShowSetAll 
-PicShowSetNone 
+| PicShowSetPng | Enable the Show Png feature |
+| PicShowSetJpg | Enable the Show Jpg feature |
+| PicShowSetAll | Enable both Png and Jpg features |
+| PicShowSetNone | Disable both Png and Jpg features |
