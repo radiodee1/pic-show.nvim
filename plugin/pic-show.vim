@@ -26,6 +26,14 @@ command! -nargs=0 PicShowSetNone lua require("pic-show").set_none()
 lua <<EOF
 
 vim.api.nvim_create_autocmd({"BufReadPost"}, { 
+    pattern = "*.jpeg",
+    callback = function()
+       require("pic-show").show_jpg(vim.fn.expand("%"))
+
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufReadPost"}, { 
     pattern = "*.jpg",
     callback = function()
        require("pic-show").show_jpg(vim.fn.expand("%"))
@@ -35,6 +43,14 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 
 vim.api.nvim_create_autocmd({"BufReadPost"}, {
     pattern = "*.png",
+    callback = function( )
+        require("pic-show").show_png(vim.fn.expand("%"))
+
+    end
+})
+
+vim.api.nvim_create_autocmd({"BufReadPost"}, {
+    pattern = "*.pdf",
     callback = function( )
         require("pic-show").show_png(vim.fn.expand("%"))
 

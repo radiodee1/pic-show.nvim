@@ -4,6 +4,8 @@ nvim plugin to show pictures.
 
 * Try to edit a png or jpg in nvim with this plugin installed and an ImageViewer window will open with the pic in it. The program works on files the first time they are opened in a buffer.
 
+* As an added bonus, 'pdf' files are accepted and are opened using the 'open' png command.
+
 * Also commands exist for enabling or disabling the feature, as well as operating on files that you don't want to open in a buffer.
 
 * Uses debian style 'open' command.
