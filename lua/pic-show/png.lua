@@ -12,7 +12,6 @@ function M.show(file)
 end
 
 function M.set()
-    print("set png")
     Allow_png = 1
 end
 

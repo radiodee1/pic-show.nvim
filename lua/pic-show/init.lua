@@ -18,21 +18,5 @@ M.set_none = function ()
 end
 
 
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.jpg",
-    callback = function()
-       print("jpg <<<")
-       jpg.show( vim.fn.expand("%") )
-    end
-})
-
-vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-    pattern = "*.png",
-    callback = function( )
-        print("png <<<")
-        png.show(vim.fn.expand("%"))
-    end
-})
-
 return M
 
