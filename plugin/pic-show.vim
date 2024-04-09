@@ -4,12 +4,12 @@ endif
 let g:loaded_picshow = 1
 
 if !exists("g:command_picshow_png") 
-    let g:command_picshow_png = "google-chrome"
+    let g:command_picshow_png = "x-www-browser"
 endif
 
 
 if !exists("g:command_picshow_jpg") 
-    let g:command_picshow_jpg = "google-chrome"
+    let g:command_picshow_jpg = "x-www-browser"
 endif
 
 
