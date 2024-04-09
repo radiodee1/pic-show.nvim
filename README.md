@@ -20,3 +20,14 @@ nvim plugin to show pictures.
 | PicShowSetJpg | Enable the Show Jpg feature |
 | PicShowSetAll | Enable both Png and Jpg features |
 | PicShowSetNone | Disable both Png and Jpg features |
+
+## Other Distributions
+
+In your Neovim config, in a vimscript style init file, enter values like these:
+
+```
+let g:command_picshow_png = "google-chrome"
+let g:command_picshow_jpg = "google-chrome"
+```
+
+The example above is from `~/.config/nvim/init.vim`.
