@@ -12,9 +12,10 @@ Tested on Neovim v0.9.4 .
 
 ## Commmands
 
-|-|-|
-| PicShowPng| |
-| PicShowJpg | |
+| Commmands | Uses |
+|---|---|
+| PicShowPng | Show a png in the viewer of choice |
+| PicShowJpg | Show a jpg in the viewer of choice |
 
 PicShowSetPng 
 PicShowSetJpg 
