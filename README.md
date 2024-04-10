@@ -14,14 +14,14 @@ nvim plugin to show pictures.
 
 ## Commmands
 
-| Commmands | Uses |
-|---|---|
-| PicShowPng | Show a png in the viewer of choice |
-| PicShowJpg | Show a jpg in the viewer of choice |
-| PicShowSetPng | Enable the Show Png feature |
-| PicShowSetJpg | Enable the Show Jpg feature |
-| PicShowSetAll | Enable both Png and Jpg features |
-| PicShowSetNone | Disable both Png and Jpg features |
+| Commmands | Uses | Args |
+|---|---|---|
+| PicShowPng | Show a png in the viewer of choice | 1 |
+| PicShowJpg | Show a jpg in the viewer of choice | 1 |
+| PicShowSetPng | Enable the Show Png feature | 0 |
+| PicShowSetJpg | Enable the Show Jpg feature | 0 |
+| PicShowSetAll | Enable both Png and Jpg features | 0 |
+| PicShowSetNone | Disable both Png and Jpg features | 0 |
 
 ## Other Distributions
 
