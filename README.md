@@ -10,7 +10,13 @@ nvim plugin to show pictures.
 
 * Uses debian style 'open' command.
 
-* Tested on Neovim v0.9.4 .
+* Tested on Neovim v0.9.4. Also tested with the Plug installer.
+
+## Installation
+
+```
+Plug 'radiodee1/pic-show.nvim'
+```
 
 ## Commmands
 
@@ -23,7 +29,7 @@ nvim plugin to show pictures.
 | PicShowSetAll | Enable both Png and Jpg features | 0 |
 | PicShowSetNone | Disable both Png and Jpg features | 0 |
 
-## Other Distributions
+## Other Linux Distributions
 
 In your Neovim config, in a vimscript style init file, enter values like these:
 
