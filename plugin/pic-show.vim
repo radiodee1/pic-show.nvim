@@ -58,7 +58,7 @@ end
 vim.api.nvim_create_autocmd({"BufReadPost"}, { 
     pattern = "*.jpeg",
     callback = function()
-       question_fn(require("pic-show").show_jpg) -- (vim.fn.expand("%"))
+       question_fn(require("pic-show").show_jpg) 
 
     end
 })
@@ -66,15 +66,14 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 vim.api.nvim_create_autocmd({"BufReadPost"}, { 
     pattern = "*.jpg",
     callback = function()
-       question_fn(require("pic-show").show_jpg) -- (vim.fn.expand("%"))
-
+       question_fn(require("pic-show").show_jpg) 
     end
 })
 
 vim.api.nvim_create_autocmd({"BufReadPost"}, {
     pattern = "*.png",
     callback = function( )
-        question_fn(require("pic-show").show_png) -- (vim.fn.expand("%"))
+        question_fn(require("pic-show").show_png) 
 
     end
 })
