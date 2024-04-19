@@ -28,6 +28,7 @@ Plug 'radiodee1/pic-show.nvim'
 | PicShowSetJpg | Enable the Show Jpg feature | 0 |
 | PicShowSetAll | Enable both Png and Jpg features | 0 |
 | PicShowSetNone | Disable both Png and Jpg features | 0 |
+| PicShowSetPrompt | Toggle prompt when viewer is opened | 0 |
 
 ## Other Linux Distributions
 
