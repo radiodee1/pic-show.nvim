@@ -17,17 +17,22 @@ M.set_jpg = jpg.set
 M.set_none = function ()
     Allow_jpg = 0
     Allow_png = 0
+    Allow_prompt = 0
 end
 
-
 M.set_prompt = function ()
+    Allow_prompt = 1
+    print("Allow_prompt " .. Allow_prompt)
+end
+
+M.toggle_prompt = function ()
     
     if Allow_prompt == 1 then
         Allow_prompt = 0
     elseif Allow_prompt == 0 then
         Allow_prompt = 1
     end
-
+    print("Allow_prompt " .. Allow_prompt)
 end
 
 return M

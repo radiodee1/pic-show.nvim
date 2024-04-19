@@ -23,6 +23,7 @@ command! -nargs=0 PicShowSetJpg lua require("pic-show").set_jpg()
 command! -nargs=0 PicShowSetAll lua require("pic-show").set_png() require("pic-show").set_jpg()
 command! -nargs=0 PicShowSetNone lua require("pic-show").set_none()
 command! -nargs=0 PicShowSetPrompt lua require("pic-show").set_prompt()
+command! -nargs=0 PicShowTogglePrompt lua require("pic-show").toggle_prompt()
 
 lua <<EOF
 
@@ -32,7 +33,8 @@ local question_fn = function(callback)
     local filename = "\"" .. vim.fn.expand("%") .. "\""
 
     if Allow_here == 1 then
-        local input = vim.fn.input("Open in viewer? (Y/n): "   )
+        local input = vim.fn.input("Open in viewer? (Y/n): " )
+        -- print(input)
         if input == 'n' or input == 'N' then
             return 
         end
