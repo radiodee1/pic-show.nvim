@@ -45,7 +45,7 @@ The example above is from `~/.config/nvim/init.vim`.
 
 ## Prompt - 04.19.2024
 
-Turn on prompt for user to specify if they want the system viewer to open a graphics file when that file is loaded in a buffer.
+You can turn on a prompt for user to specify if they want the system viewer to open a graphics file when that file is loaded in a buffer.
 
 If you enable the prompt there are three possible use cases. In the first instance you don't want to open the file. 
 In the second instance you want to open the file with the default viewer. In the third instance you want to open the 
