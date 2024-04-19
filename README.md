@@ -28,7 +28,9 @@ Plug 'radiodee1/pic-show.nvim'
 | PicShowSetJpg | Enable the Show Jpg feature | 0 |
 | PicShowSetAll | Enable both Png and Jpg features | 0 |
 | PicShowSetNone | Disable both Png and Jpg features | 0 |
-| PicShowSetPrompt | Toggle prompt when viewer is opened | 0 |
+| PicShowSetPrompt | Enable prompt when viewer is opened | 0 |
+| PicShowTogglePrompt | Toggle prompt when viewer is opened | 0 |
+
 
 ## Other Linux Distributions
 
@@ -40,3 +42,12 @@ let g:command_picshow_jpg = "google-chrome"
 ```
 
 The example above is from `~/.config/nvim/init.vim`.
+
+## Prompt - 04.19.2024
+
+Turn on prompt for user to specify if they want the system viewer to open a graphics file when that file is loaded in a buffer.
+
+If you enable the prompt there are three possible use cases. In the first instance you don't want to open the file. 
+In the second instance you want to open the file with the default viewer. In the third instance you want to open the 
+file in another editor besides the system viewer. In this last case you can type the name of the executable at the 
+prompt where you would normally enter 'y' or 'n'.
