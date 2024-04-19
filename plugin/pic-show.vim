@@ -5,13 +5,13 @@ let g:loaded_picshow = 1
 
 if !exists("g:command_picshow_png") 
     " let g:command_picshow_png = "x-www-browser"
-    let g:command_picshow_png = "open"
+    let g:command_picshow_png = "xdg-open"
 endif
 
 
 if !exists("g:command_picshow_jpg") 
     " let g:command_picshow_jpg = "x-www-browser"
-    let g:command_picshow_jpg = "open"
+    let g:command_picshow_jpg = "xdg-open"
 endif
 
 
@@ -22,13 +22,43 @@ command! -nargs=0 PicShowSetPng lua require("pic-show").set_png()
 command! -nargs=0 PicShowSetJpg lua require("pic-show").set_jpg()
 command! -nargs=0 PicShowSetAll lua require("pic-show").set_png() require("pic-show").set_jpg()
 command! -nargs=0 PicShowSetNone lua require("pic-show").set_none()
+command! -nargs=0 PicShowSetPrompt lua require("pic-show").set_prompt()
 
 lua <<EOF
+
+local question_fn = function(callback)
+
+    local Allow_here = Allow_prompt
+    local filename = "\"" .. vim.fn.expand("%") .. "\""
+
+    if Allow_here == 1 then
+        local input = vim.fn.input("Open in viewer? (Y/n): "   )
+        if input == 'n' or input == 'N' then
+            return 
+        end
+        if input == 'y' or input == 'Y' or input == "" then
+            callback(filename)
+            return
+        end
+
+        local png = vim.g.command_picshow_png 
+        local jpg = vim.g.command_picshow_jpg
+        vim.g.command_picshow_png = input
+        vim.g.command_picshow_jpg = input
+        callback(filename)
+        vim.g.command_picshow_jpg = jpg 
+        vim.g.command_picshow_png = png
+        return
+    else
+        callback(filename)
+    end 
+
+end 
 
 vim.api.nvim_create_autocmd({"BufReadPost"}, { 
     pattern = "*.jpeg",
     callback = function()
-       require("pic-show").show_jpg(vim.fn.expand("%"))
+       question_fn(require("pic-show").show_jpg) -- (vim.fn.expand("%"))
 
     end
 })
@@ -36,7 +66,7 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 vim.api.nvim_create_autocmd({"BufReadPost"}, { 
     pattern = "*.jpg",
     callback = function()
-       require("pic-show").show_jpg(vim.fn.expand("%"))
+       question_fn(require("pic-show").show_jpg) -- (vim.fn.expand("%"))
 
     end
 })
@@ -44,7 +74,7 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 vim.api.nvim_create_autocmd({"BufReadPost"}, {
     pattern = "*.png",
     callback = function( )
-        require("pic-show").show_png(vim.fn.expand("%"))
+        question_fn(require("pic-show").show_png) -- (vim.fn.expand("%"))
 
     end
 })
@@ -52,7 +82,7 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
 vim.api.nvim_create_autocmd({"BufReadPost"}, {
     pattern = "*.pdf",
     callback = function( )
-        require("pic-show").show_png(vim.fn.expand("%"))
+        question_fn(require("pic-show").show_png) 
 
     end
 })

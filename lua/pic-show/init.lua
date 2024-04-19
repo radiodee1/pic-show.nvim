@@ -6,6 +6,8 @@ local M = {}
 Allow_png = 1
 Allow_jpg = 1
 
+Allow_prompt = 0
+
 M.show_png = png.show 
 M.show_jpg = jpg.show 
 
@@ -17,6 +19,16 @@ M.set_none = function ()
     Allow_png = 0
 end
 
+
+M.set_prompt = function ()
+    
+    if Allow_prompt == 1 then
+        Allow_prompt = 0
+    elseif Allow_prompt == 0 then
+        Allow_prompt = 1
+    end
+
+end
 
 return M
 
