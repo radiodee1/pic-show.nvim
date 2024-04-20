@@ -33,7 +33,7 @@ local question_fn = function(callback)
     local filename = "\"" .. vim.fn.expand("%") .. "\""
 
     if Allow_here == 1 then
-        local input = vim.fn.input("Open in viewer? (Y/n): " )
+        local input = vim.fn.input("Open in viewer? (Y/n/name): " )
         -- print(input)
         if input == 'n' or input == 'N' then
             return 
