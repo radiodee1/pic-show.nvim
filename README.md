@@ -53,11 +53,11 @@ file in another editor besides the system viewer. In this last case you can type
 prompt where you would normally enter 'y' or 'n'.
 
 
-You could type
+You could type this 
 ```
 Open in viewer? (Y/n/name): y 
 ```
-or you could type
+or you could type this 
 ```
 Open in viewer? (Y/n/name): n 
 ```
