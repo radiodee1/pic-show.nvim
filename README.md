@@ -51,3 +51,18 @@ If you enable the prompt there are three possible use cases. In the first instan
 In the second instance you want to open the file with the default viewer. In the third instance you want to open the 
 file in another editor besides the system viewer. In this last case you can type the name of the executable at the 
 prompt where you would normally enter 'y' or 'n'.
+
+
+You could type
+```
+Open in viewer? (Y/n/name): y 
+```
+or you could type
+```
+Open in viewer? (Y/n/name): n 
+```
+or finally you could type something like this 
+```
+Open in viewer? (Y/n/name): gimp
+```
+Of course you would have to have gimp installed on your system for this to work.
