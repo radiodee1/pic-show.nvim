@@ -65,4 +65,4 @@ or finally you could type something like this
 ```
 Open in viewer? (Y/n/name): gimp
 ```
-Of course you would have to have gimp installed on your system for this to work.
+Of course you would have to have gimp installed on your system for this to work. 
