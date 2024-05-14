@@ -22,7 +22,7 @@ end
 
 M.set_prompt = function ()
     Allow_prompt = 1
-    print("Allow_prompt " .. Allow_prompt)
+    print("pic-show allow_prompt: " .. Allow_prompt)
 end
 
 M.toggle_prompt = function ()
@@ -32,7 +32,7 @@ M.toggle_prompt = function ()
     elseif Allow_prompt == 0 then
         Allow_prompt = 1
     end
-    print("Allow_prompt " .. Allow_prompt)
+    print("pic-show allow_prompt: " .. Allow_prompt)
 end
 
 return M
