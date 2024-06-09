@@ -30,7 +30,7 @@ Plug 'radiodee1/pic-show.nvim'
 | PicShowSetNone | Disable both Png and Jpg features | 0 |
 | PicShowSetPrompt | Enable prompt when viewer is opened | 0 |
 | PicShowTogglePrompt | Toggle prompt when viewer is opened | 0 |
-
+| PicShowCurrent | Show the current file in the viewer | 0 |
 
 ## Other Linux Distributions
 
