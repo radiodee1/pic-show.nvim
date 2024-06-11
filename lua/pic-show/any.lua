@@ -2,7 +2,7 @@
 local M = {}
 
 function M.show()
-    local whitelist = {".png", ".jpg", ".jpeg", ".pdf"}
+    local whitelist = {".png", ".jpg", ".jpeg", ".pdf", ".html", ".htm"}
     local filename = "\"" .. vim.fn.expand("%") .. "\""
     
     for _, i in ipairs(whitelist) do
