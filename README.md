@@ -69,5 +69,5 @@ Of course you would have to have gimp installed on your system for this to work.
 
 ## NOTE
 
-When using the `PicShowPng` and `PicShowJpg` commands, a full path may need to be supplied to the picture name. Tilda characters may not automatically converted to the 
+When using the `PicShowPng` and `PicShowJpg` commands, a full path may need to be supplied to the picture name. Tilda characters may not be automatically converted to the 
 full url.
