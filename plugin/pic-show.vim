@@ -89,4 +89,12 @@ vim.api.nvim_create_autocmd({"BufReadPost"}, {
     end
 })
 
+vim.api.nvim_create_autocmd({"BufReadPost"}, {
+    pattern = "*.gif",
+    callback = function( )
+        question_fn(require("pic-show").show_png) 
+
+    end
+})
+
 EOF
